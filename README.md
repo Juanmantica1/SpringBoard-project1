@@ -1,18 +1,33 @@
 # SpringBoard-project1
+
 Synopsis:
+
 This project was created by springboard in order to help students, like myself, work on json files through the the python libarry, pandas. The project itself was composed of three excercises. While, the first two tested the basics of the promt, the last one was far more complicated.
+
 Project:
+
 JSON exercise¶
+
 Using data in file 'data/world_bank_projects.json' and the techniques demonstrated above,
+
 Find the 10 countries with most projects
+
 Find the top 10 major project themes (using column 'mjtheme_namecode')
+
 In 2. above you will notice that some entries have only the code and the name is missing. Create a dataframe with the missing names filled in.
+
 IN[87]
+
 json_df = pd.read_json('data/world_bank_projects.json')
+
 json_df
+
 #load as python data frame
+
 IN[88]
+
 answer1=json_df["countryname"].value_counts().head(10)
+
 answer1 # Africa is not a country but a continent so I will need to drop it
 answer1=answer1.drop("Africa")
 answer1
